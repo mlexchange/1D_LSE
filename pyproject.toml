@@ -1,0 +1,40 @@
+[project]
+name = "mlex_spectral_viz"
+version = "0.0.1"
+authors = []
+description = ""
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "dash==2.9.3",
+    "dash-core-components==2.0.0",
+    "dash-bootstrap-components==1.0.2",
+    "dash-iconify==0.1.2",
+    "plotly==5.14.1",
+    "numpy",
+    "pandas>=1.3.0",
+    "scipy>=1.7.0",
+    "torch>=1.9.0",
+    "pyroved",
+]
+
+[project.optional-dependencies]
+# These are required for developing the package (running the tests, building
+# the documentation) but not necessarily required for _using_ it.
+dev = [
+    "dash[testing]",
+    "flake8",
+    "pre-commit",
+    "pytest-mock",
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.setuptools]
+package-dir = {"" = "."}
